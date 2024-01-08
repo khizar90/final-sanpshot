@@ -1,0 +1,26 @@
+   var newContactsHTML = '';
+                            response.users.forEach(function(user) {
+                                console.log(response.message.message)
+
+                                newContactsHTML += `
+                                <li class="chat-contact-list-item" data-user-id="${user.user_id}">
+                                    <a class="d-flex align-items-center">
+                                        <div class="flex-shrink-0 avatar">
+                                            <img src="${user.user.image}" alt="Avatar" class="rounded-circle" />
+                                        </div>
+                                        <div class="chat-contact-info flex-grow-1 ms-2">
+                                            <h6 class="chat-contact-name text-truncate m-0">${user.user.name}</h6>
+                                            <p class="chat-contact-status text-muted text-truncate mb-0">
+                                                ${response.message.message}
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                `;
+
+                            });
+
+                            $('#chat-contact-list').html(newContactsHTML);
+
+
+        return response()->json(['message' => $message, 'users' => $latestMessagesData]);

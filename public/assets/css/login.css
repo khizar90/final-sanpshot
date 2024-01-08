@@ -1,0 +1,17 @@
+.authentication-wrapper {
+    background-color: #171717;
+    /* Adjust as needed */
+    width: 100%;
+    height: 100vh;
+}
+.w-px-400{
+    background-color: #ffffff;
+    border-radius: 1.5rem
+}
+.image img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        height: auto;
+}
